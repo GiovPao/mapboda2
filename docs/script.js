@@ -98,11 +98,12 @@ const parkIcon = L.divIcon({
   // Add GeoJSON line to map
   L.geoJSON(geojsonLine2, {
     style: { color: "red", weight: 5, opacity: 0.6}
-  }).addTo(map).bindPopup(funicolarpopupContent, {     permanent: true,   // always visible
-    autoClose: false,  // don't auto-close when opening another popup
-    closeOnClick: false,
-    className: 'route-popup-container',
-    direction: 'top'}).openPopup();
+  }).addTo(map)
+  //.bindPopup(funicolarpopupContent, {     permanent: true,   // always visible
+  //  autoClose: false,  // don't auto-close when opening another popup
+  //  closeOnClick: false,
+  //  className: 'route-popup-container',
+  //  direction: 'top'}).openPopup();
 
 
 L.geoJSON(geojsonLine, {
