@@ -6,7 +6,7 @@ document.head.appendChild(leafletScript);
 
 function initMap() {
   // Create the map
-  const map = L.map("map").setView([43.321, -1.99], 14);
+  const map = L.map("map").setView([43.317, -1], 16);
 
   // Add OpenStreetMap tiles
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
@@ -98,12 +98,11 @@ const parkIcon = L.divIcon({
   // Add GeoJSON line to map
   L.geoJSON(geojsonLine2, {
     style: { color: "red", weight: 5, opacity: 0.6}
-  }).addTo(map)
-  //.bindPopup(funicolarpopupContent, {     permanent: true,   // always visible
-  //  autoClose: false,  // don't auto-close when opening another popup
-  //  closeOnClick: false,
-  //  className: 'route-popup-container',
-  //  direction: 'top'}).openPopup();
+  }).addTo(map).bindPopup(funicolarpopupContent, {     permanent: true,   // always visible
+    autoClose: false,  // don't auto-close when opening another popup
+    closeOnClick: false,
+    className: 'route-popup-container',
+    direction: 'center'}).openPopup();
 
 
 L.geoJSON(geojsonLine, {
@@ -121,5 +120,5 @@ L.geoJSON(geojsonLine, {
     L.marker([locations[1].lat, locations[1].lng]),
     L.marker([43.3158,-2.0125]),
   ]);
-  map.fitBounds(group.getBounds().pad(0.2));
+  //map.fitBounds(group.getBounds().pad(0.2));
 }
