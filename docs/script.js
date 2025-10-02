@@ -120,5 +120,5 @@ L.geoJSON(geojsonLine, {
     L.marker([locations[1].lat, locations[1].lng]),
     //L.marker([43.3158,-2]),
   ]);
-  map.fitBounds(group.getBounds().pad(0.7));
+  map.fitBounds(group.getBounds().pad(0.5));
 }
