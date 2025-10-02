@@ -118,7 +118,7 @@ L.geoJSON(geojsonLine, {
   const group = new L.featureGroup([
     L.marker([locations[0].lat, locations[0].lng]),
     L.marker([locations[1].lat, locations[1].lng]),
-    L.marker([43.3158,-2.0125]),
+    //L.marker([43.3158,-2]),
   ]);
-  //map.fitBounds(group.getBounds().pad(0.2));
+  map.fitBounds(group.getBounds().pad(0.7));
 }
